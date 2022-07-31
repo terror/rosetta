@@ -6,7 +6,7 @@ class S:
     raise TypeError('Call instance() instead!')
 
   def __instancecheck__(self, o):
-    return instance(o, self._d)
+    return self.instance(o, self._d)
 
   def instance(self, *args, **kwargs):
     if not hasattr(self, '_instance'):
